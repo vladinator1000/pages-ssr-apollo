@@ -1,0 +1,38 @@
+{
+  "name": "pages-ssr-apollo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build --ssr src/_worker.ts --mode production",
+    "preview": "pnpm build && wrangler pages dev dist",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "@remix-run/node": "^2.9.2",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "@types/set-cookie-parser": "^2.4.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "prettier": "^3.2.5",
+    "set-cookie-parser": "^2.6.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "wrangler": "^3.56.0"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.10.4",
+    "graphql-yoga": "^5.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.23.1",
+    "worktop": "0.8.0-next.18"
+  }
+}

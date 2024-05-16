@@ -1,0 +1,3 @@
+name = "pages-ssr-apollo"
+compatibility_date = "2024-02-03"
+compatibility_flags = ["nodejs_compat"]
