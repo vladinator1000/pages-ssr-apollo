@@ -18,8 +18,6 @@ export let router = new Router<WorkerContext>()
 
 router.add('POST', '/graphql', async (req, context) => {
   let gqlServer = createYoga({ schema })
-  console.log('yo');
-
   return gqlServer.fetch(req, context)
 })
 

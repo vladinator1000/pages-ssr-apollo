@@ -13,30 +13,14 @@ export function Html({ assets, content, apolloState }: Props) {
   return (
     <html lang="en">
       <Helmet>
-        <title>Yupty</title>
+        <title>App</title>
         <meta charSet="utf-8" />
         <meta
           name="viewport"
           content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
         />
-        <link
-          rel="stylesheet"
-          href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css"
-          integrity="sha384-j8y0ITrvFafF4EkV1mPW0BKm6dp3c+J9Fky22Man50Ofxo2wNe5pT1oZejDH9/Dt"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="/node_modules/normalize.css/normalize.css"
-        />
       </Helmet>
       <body>
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<b>Please enable JavaScript for a better experience.</b>`,
-          }}
-        />
-
         <div id="root" dangerouslySetInnerHTML={{ __html: content }} />
         <script
           type="module"

@@ -12,6 +12,8 @@ if (!element) {
   throw new Error('Unable to find element with ID "root" in HTML.')
 }
 
+console.log('hello from entry client')
+
 let app = (
   <StrictMode>
     <HelmetProvider>
