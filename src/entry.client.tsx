@@ -1,5 +1,5 @@
 import React, { StrictMode } from 'react'
-import { hydrateRoot } from 'react-dom/client'
+import { hydrateRoot, createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { ApolloProvider } from '@apollo/client'
@@ -11,8 +11,6 @@ let element = document.getElementById('root')
 if (!element) {
   throw new Error('Unable to find element with ID "root" in HTML.')
 }
-
-console.log('hello from entry client')
 
 let app = (
   <StrictMode>
@@ -27,3 +25,6 @@ let app = (
 )
 
 hydrateRoot(element, app)
+
+
+

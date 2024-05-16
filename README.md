@@ -22,3 +22,5 @@ If I remove the `<Suspense>` component, which I suspect is causing it, I get ano
 ```
 A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition.
 ```
+
+The errors above seem to be fixable with https://loadable-components.com/
