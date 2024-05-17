@@ -41,7 +41,7 @@ export let render: Handler<WorkerContext> = async (req, context) => {
   let vite = context.bindings.VITE
   if (vite) {
     // This feels wrong, I want to use the streaming API (renderToReadableStream),
-    // but I'm not sure how to add the Vite transformIndexHtml to it.
+    // but I'm not sure how to add the Vite built-in HTML transforms to it.
     let html = renderToString(app)
     html = await vite.transformIndexHtml(url.pathname, html)
     html = `<!DOCTYPE html>${html}`
