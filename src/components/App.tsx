@@ -1,17 +1,16 @@
 import React, { Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import loadable from '@loadable/component'
 
-let LandingPage = loadable(() => import('./LandingPage'))
-let DataPage = loadable(() => import('./DataPage'))
-
-let withSuspense = false
+let LandingPage = React.lazy(() => import('./LandingPage'))
+let DataPage = React.lazy(() => import('./DataPage'))
 
 export function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/data" element={<DataPage />} />
-    </Routes>
+    <Suspense fallback={<p>Loading...</p>}>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/data" element={<DataPage />} />
+      </Routes>
+    </Suspense>
   )
 }
