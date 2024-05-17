@@ -6,14 +6,11 @@ import { fromNodeRequest, toNodeRequest } from './utilities/nodeAdapter'
 
 type Options = object
 
-export let cloudflareDevProxyVitePlugin = <
-  Env,
-  Cloudflare extends CfProperties,
->(
+export let cloudflareDevProxy = <Env, Cloudflare extends CfProperties>(
   options?: Options,
 ): Plugin => {
   return {
-    name: 'devProxyVitePlugin',
+    name: 'cloudflareDevProxy',
     config: () => ({
       ssr: {
         resolve: {
